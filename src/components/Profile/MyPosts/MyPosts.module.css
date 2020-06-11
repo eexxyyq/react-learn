@@ -1,0 +1,12 @@
+.postsBlock {
+    padding-left: 20px;
+}
+.postsBlock input {
+    margin: 20px 20px 5px;
+    width: 95%;
+    height: 60px;
+}
+
+.postsBlock button {
+    margin: 0 40% 20px;
+}

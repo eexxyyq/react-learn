@@ -1,0 +1,10 @@
+.item {
+    font-size: 25px;
+    display: grid;
+    grid-template-columns: 1fr 20fr;
+    padding-bottom: 10px;
+}
+.item img {
+    width: 35px;
+    border-radius: 15px;
+}

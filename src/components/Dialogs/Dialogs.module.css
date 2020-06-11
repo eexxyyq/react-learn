@@ -1,0 +1,28 @@
+.dialogsBlock {
+    display: grid;
+    grid-template-areas: "d m";
+    grid-auto-columns: 1fr 7fr;
+    width: 100%;
+    height: 100%;
+    grid-gap: 10px;
+}
+
+.dialogsItems {
+    background-color: darkslategray;
+    padding: 10px;
+    color: white;
+}
+
+.messagesItems {
+    background-color: bisque;
+    padding: 10px;
+}
+
+.dialogsItems a.active {
+    color: gold;
+}
+
+.dialog a{
+    text-decoration: none;
+    color: white;
+}

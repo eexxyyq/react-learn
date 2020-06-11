@@ -1,0 +1,11 @@
+.header img {
+    padding: 5px 10px 0;
+    width: 50px;
+}
+
+.header {
+    align-items: center;
+    justify-content: center;
+    grid-area: h;
+    background-color: aquamarine;
+}
