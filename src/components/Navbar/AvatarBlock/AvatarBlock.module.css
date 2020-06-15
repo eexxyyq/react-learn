@@ -1,0 +1,12 @@
+.avatar img {
+    border-radius: 50px;
+    height: 35px;
+    width: 40px;
+}
+
+.avatar {
+    width: 140px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+}

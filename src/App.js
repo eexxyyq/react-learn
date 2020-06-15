@@ -11,10 +11,13 @@ function App(props) {
         <BrowserRouter>
             <div className='app-wrapper'>
                 <Header/>
-                <Navbar/>
+                <Navbar state = {props.state.navbarPage} />
                 <div className='app-wrapper-content'>
-                    <Route render={() => <Profile posts={props.posts}/>} path='/profile'/>
-                    <Route render={() => <Dialogs dialogs = {props.dialogs} messages={props.messages}/>} path='/dialogs'/>
+                    <Route render={() => <Profile state={props.state.profilePage}
+                                                  addPost = {props.addPost}
+                                                  newPostText={props.state.profilePage.newPostText}
+                                                  updateNewPostText = {props.updateNewPostText}/>} path='/profile'/>
+                    <Route render={() => <Dialogs state = {props.state.dialogsPage} />} path='/dialogs'/>
                 </div>
             </div>
         </BrowserRouter>
