@@ -6,7 +6,6 @@ import MessageItem from "./MessageItem/MessageItem";
 const Dialogs = (props) => {
     let addMessage = React.createRef()
     let sendMessage = () => {
-        props.state.dialogsPage.messagesData.push(addMessage.current.value)
     }
 
     return (
