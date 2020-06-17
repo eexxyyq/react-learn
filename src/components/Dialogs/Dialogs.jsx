@@ -7,7 +7,6 @@ const Dialogs = (props) => {
     let addMessage = React.createRef()
     let sendMessage = () => {
     }
-
     return (
         <div className={s.dialogsBlock}>
             <div className={s.dialogsItems}>
