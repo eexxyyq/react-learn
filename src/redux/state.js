@@ -1,15 +1,25 @@
-import renderEntireTree from "../render";
+let renderEntireTree = (state) => {
+}
 
 let state = {
     navbarPage: {
         avatarData: [
-            {id: '1', url: 'https://i7.pngflow.com/pngimage/246/366/png-computer-icons-avatar-user-profile-man-avatars-logo-monochrome-black-desktop-wallpaper-clipart.png'},
-            {id: '2', url: 'https://i7.pngflow.com/pngimage/246/366/png-computer-icons-avatar-user-profile-man-avatars-logo-monochrome-black-desktop-wallpaper-clipart.png'},
-            {id: '3', url: 'https://i7.pngflow.com/pngimage/246/366/png-computer-icons-avatar-user-profile-man-avatars-logo-monochrome-black-desktop-wallpaper-clipart.png'}
+            {
+                id: '1',
+                url: 'https://i7.pngflow.com/pngimage/246/366/png-computer-icons-avatar-user-profile-man-avatars-logo-monochrome-black-desktop-wallpaper-clipart.png'
+            },
+            {
+                id: '2',
+                url: 'https://i7.pngflow.com/pngimage/246/366/png-computer-icons-avatar-user-profile-man-avatars-logo-monochrome-black-desktop-wallpaper-clipart.png'
+            },
+            {
+                id: '3',
+                url: 'https://i7.pngflow.com/pngimage/246/366/png-computer-icons-avatar-user-profile-man-avatars-logo-monochrome-black-desktop-wallpaper-clipart.png'
+            }
         ]
     },
     profilePage: {
-        postsData : [
+        postsData: [
             {id: '1', message: 'Hello World'},
             {id: '2', message: 'My first post'},
             {id: '3', message: 'My second post'},
@@ -20,7 +30,7 @@ let state = {
         newPostText: ''
     },
     dialogsPage: {
-        dialogsData : [
+        dialogsData: [
             {id: '1', name: 'Andrew'},
             {id: '2', name: 'Eliza'},
             {id: '3', name: 'Semen'},
@@ -28,15 +38,15 @@ let state = {
             {id: '5', name: 'Elly'}
         ],
 
-        messagesData : [
-            {id : '1', message: 'How r u?', ownerId: '1'},
-            {id : '2', message: 'Hello!', ownerId: '2'},
-            {id : '3', message: 'Some new msg', ownerId: '1'}
+        messagesData: [
+            {id: '1', message: 'How r u?', ownerId: '1'},
+            {id: '2', message: 'Hello!', ownerId: '2'},
+            {id: '3', message: 'Some new msg', ownerId: '1'}
         ]
     }
 }
 
-export let addPost = () => {
+export const addPost = () => {
     state.profilePage.postsData.push({
         id: '5',
         message: state.profilePage.newPostText
@@ -45,9 +55,13 @@ export let addPost = () => {
     renderEntireTree(state);
 }
 
-export let updateNewPostText = (newText) => {
+export const updateNewPostText = (newText) => {
     state.profilePage.newPostText = newText
     renderEntireTree(state)
+}
+
+export const subscribe = (observer) => {
+    renderEntireTree = observer
 }
 
 export default state
